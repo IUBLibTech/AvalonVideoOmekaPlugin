@@ -89,10 +89,10 @@ class AvalonVideoPlugin extends Omeka_Plugin_AbstractPlugin
       	<?php if (metadata('item',array('Avalon Video','Avalon Section PURL'))) {?>
 			<div id="vid_player" style= "margin:0 auto;">
 				<?php if (metadata('item',array('Avalon Video','Avalon Width'))) {?>
-				<iframe style="margin:0 auto;" src=<?php echo html_escape(metadata("item",array("Avalon Video","Avalon Section PURL")))?>?urlappend=%2Fembed width=<?php echo metadata('item',array('Avalon Video','Avalon Width'));?> height=<?php echo metadata('item',array('Avalon Video','Avalon Height'));?> frameborder=0 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				<iframe style="margin:0 auto;" title="Avalon Embedded Video" src=<?php echo html_escape(metadata("item",array("Avalon Video","Avalon Section PURL")))?>?urlappend=%2Fembed width=<?php echo metadata('item',array('Avalon Video','Avalon Width'));?> height=<?php echo metadata('item',array('Avalon Video','Avalon Height'));?> frameborder=0 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			</div>
 			<?php } else { ?>
-					<iframe style="margin:0 auto;" src=<?php echo html_escape(metadata("item",array("Avalon Video","Avalon Section PURL")))?>?urlappend=%2Fembed width=<?php echo get_option('avalon_width_public');?>; height=<?php echo get_option('avalon_height_public');?>; frameborder=0 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<iframe style="margin:0 auto;" title="Avalon Embedded Video" src=<?php echo html_escape(metadata("item",array("Avalon Video","Avalon Section PURL")))?>?urlappend=%2Fembed width=<?php echo get_option('avalon_width_public');?>; height=<?php echo get_option('avalon_height_public');?>; frameborder=0 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				</div>
 		<?php	}  
 			} 
